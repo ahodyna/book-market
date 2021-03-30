@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.render('main')
 })
 
+app.get('/delivery', (req, res) => {
+  res.render('delivery')
+})
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
