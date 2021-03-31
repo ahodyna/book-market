@@ -5,10 +5,15 @@ const __dirname = path.resolve();
 
 const app = express()
 const port = 3000
+app.listen(port)
+
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'ejs'))
 
+
+// routes
 app.get('/', (req, res) => {
   res.render('main')
 })
@@ -17,8 +22,8 @@ app.get('/delivery', (req, res) => {
   res.render('delivery')
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.get('/sale', (req, res) => {
+  res.render('sale')
 })
 
 

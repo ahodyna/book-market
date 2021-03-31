@@ -22,21 +22,63 @@
 header {
   background-color: #f1f1f1;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
-a {
+.content-header {
+  width: 100%;
+}
+
+.tmp {
+  max-width: 60%;
+  text-align: center;
+  display: inline-block;
+}
+
+.tmp2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-sidebar-left a,
+.btnBuy {
   text-decoration: none;
   display: inline-block;
-  padding: 10px 30px;
+  padding: 10px 15px;
   color: rgb(0, 0, 0);
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  margin: 0 7px;
 }
 
 a:hover {
   color: rgb(70, 59, 97);
+}
+
+.content-sidebar-right a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  background: rgb(156, 151, 151);
+  border-radius: 37px;
+  padding: 19px 9px;
+  font-size: 8px;
+  margin: 0 7px;
+}
+
+.content-sidebar-right a:hover {
+  background: rgb(179, 137, 137);
+  box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+  transition: 0.5s;
+}
+
+.content-sidebar-right a:first-child {
+  margin-left: 60px;
+}
+
+.content-sidebar-right a:last-child {
+  padding: 19px 12px;
 }
 
 /* line title */
@@ -106,33 +148,141 @@ footer {
   max-height: 300px;
 }
 
-.book-item a {
-  background: rgb(41, 38, 38);
+.book-item:hover {
+  margin-bottom: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: 0.5s;
+}
+
+.bntBuyBookShop {
+  background: rgb(87, 85, 85);
   color: #fff;
   cursor: pointer;
   border-radius: 22px;
   padding: 10px 30px;
-  font-size: 16px;
+  font-size: 12px;
   margin: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.book-item a:hover {
+.bntBuyBookShop:hover {
   background: rgb(70, 59, 97);
   color: #fff;
+  transition: 0.5s;
+}
+
+.btnBuy {
+  background: rgb(87, 85, 85);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 9px 20px;
+  font-size: 10px;
+  margin: 0 0 4px 25px;
+}
+
+.btnBuy:hover {
+  background: rgb(70, 59, 97);
+  color: #fff;
+  transition: 0.5s;
 }
 
 .book-item p {
   font-size: small;
 }
- 
+
 .imageBookShop {
   height: 120px;
   width: 90px;
 }
 
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.book-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.block-price-edit{
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-padding{
+  padding: 4px;
+}
+
 /* delivery page */
 
-.delivery-paragraph{
+.delivery-paragraph {
   padding: 10px;
 }
 
+/* sale page */
+
+.sale-book-item{
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #f1f1f1;
+  margin: 15px;
+  padding: 25px 10px 20px 10px; 
+}
+
+.imageSaleBook{
+  padding-left: 20px;
+}
+
+.text-sale{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+
+.bntBuyBookSale{
+  background: rgb(87, 85, 85);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 22px;
+  padding: 10px 30px;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.bntBuyBookShop:hover {
+  background: rgb(70, 59, 97);
+  color: #fff;
+  transition: 0.5s;
+}
+
+.elem-padding{
+  padding: 5px;
+}
+
+.salePrice{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pricePadding{
+  padding-left: 7px;
+}
+
+.pricePadding:first-child{
+  text-decoration: line-through;
+  color:rgb(184, 21, 21)
+}
