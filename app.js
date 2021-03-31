@@ -26,5 +26,9 @@ app.get('/sale', (req, res) => {
   res.render('sale')
 })
 
+app.get('/blog', (req, res) => {
+  res.render('blog')
+})
+
 
 app.use(express.static(__dirname + '/public'))

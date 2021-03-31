@@ -69,7 +69,7 @@ a:hover {
 
 .content-sidebar-right a:hover {
   background: rgb(179, 137, 137);
-  box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
   transition: 0.5s;
 }
 
@@ -150,7 +150,7 @@ footer {
 
 .book-item:hover {
   margin-bottom: 10px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transition: 0.5s;
 }
 
@@ -213,12 +213,12 @@ footer {
   -webkit-box-orient: vertical;
 }
 
-.block-price-edit{
+.block-price-edit {
   display: flex;
   flex-direction: row;
 }
 
-.icon-padding{
+.icon-padding {
   padding: 4px;
 }
 
@@ -230,19 +230,19 @@ footer {
 
 /* sale page */
 
-.sale-book-item{
+.sale-book-item {
   display: flex;
   flex-direction: row-reverse;
   background-color: #f1f1f1;
   margin: 15px;
-  padding: 25px 10px 20px 10px; 
+  padding: 25px 10px 20px 10px;
 }
 
-.imageSaleBook{
+.imageSaleBook {
   padding-left: 20px;
 }
 
-.text-sale{
+.text-sale {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -250,8 +250,7 @@ footer {
   -webkit-box-orient: vertical;
 }
 
-
-.bntBuyBookSale{
+.bntBuyBookSale {
   background: rgb(87, 85, 85);
   color: #fff;
   cursor: pointer;
@@ -268,21 +267,51 @@ footer {
   transition: 0.5s;
 }
 
-.elem-padding{
+.elem-padding {
   padding: 5px;
 }
 
-.salePrice{
+.salePrice {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.pricePadding{
+.pricePadding {
   padding-left: 7px;
 }
 
-.pricePadding:first-child{
+.pricePadding:first-child {
   text-decoration: line-through;
-  color:rgb(184, 21, 21)
+  color: rgb(184, 21, 21);
+}
+
+/* blog page */
+
+.wrapBlogItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBlog {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.contentSectionBlog {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+}
+
+.imageBlog {
+  padding-right: 10px;
+}
+
+.imageBlog img {
+  height: 250px;
+  width: 320px;
 }
