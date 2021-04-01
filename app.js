@@ -34,4 +34,8 @@ app.get('/basket', (req, res) => {
   res.render('basket')
 })
 
+app.get('/login', (req, res) => {
+  res.render('login')
+})
+
 app.use(express.static(__dirname + '/public'))

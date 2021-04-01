@@ -318,7 +318,7 @@ footer {
 
 /* Basket */
 
-.removeBook{
+.removeBook {
   background: rgb(170, 92, 46);
   color: #fff;
   cursor: pointer;
@@ -330,7 +330,63 @@ footer {
   text-transform: uppercase;
 }
 
-.removeBook:hover{
+.removeBook:hover {
   background: rgb(192, 74, 6);
   color: #fff;
+}
+
+/* Login */
+
+.contentLogin {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.loginContentWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.inputForm {
+  border: 2px solid rgb(66, 63, 63);
+  display: inline-block;
+  box-sizing: border-box;
+  height: 41px;
+  vertical-align: middle;
+  border-radius: 12px;
+  width: 260px;
+  padding: 14px;
+}
+
+.inputForm:hover,
+.inputForm:focus {
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.09);
+}
+
+.loginbtn{
+  background: rgb(38, 117, 38);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px 40px;
+  font-size: 12px;
+  margin: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.loginPageMargin{
+  margin: 10px;
+}
+
+.marginTop{
+  margin-top: 22px;
 }
