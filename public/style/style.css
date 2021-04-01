@@ -13,7 +13,7 @@
 
 .content {
   text-align: center;
-  max-width: 60%;
+  width: 60%;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -314,4 +314,23 @@ footer {
 .imageBlog img {
   height: 250px;
   width: 320px;
+}
+
+/* Basket */
+
+.removeBook{
+  background: rgb(170, 92, 46);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 22px;
+  padding: 10px 30px;
+  font-size: 12px;
+  margin: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.removeBook:hover{
+  background: rgb(192, 74, 6);
+  color: #fff;
 }

@@ -30,5 +30,8 @@ app.get('/blog', (req, res) => {
   res.render('blog')
 })
 
+app.get('/basket', (req, res) => {
+  res.render('basket')
+})
 
 app.use(express.static(__dirname + '/public'))
