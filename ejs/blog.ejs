@@ -14,7 +14,7 @@
         <main class='wrap-content'>
                
             <div class='content'>
-                <h2 class="content-title">Blog</h2>
+                <h2 class="content-title">Blog<a id="btnAddNewBlog" type='button'><span class='btnBuy' >New</span></a></h2>
                 <hr class="line"></hr>
                 <div class='wrapBlogItems'>
 
@@ -111,7 +111,8 @@
     <footer>
         <%- include('./partials/footer'); %>
     </footer>
-
+    <%- include('./partials/modalWindowBlog'); %>
+<script src='javascript/blogModalWindow.js'></script>
 </body>
 
 </html>

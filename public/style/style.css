@@ -19,6 +19,7 @@
 }
 
 /* header */
+
 header {
   background-color: #f1f1f1;
   text-align: center;
@@ -40,8 +41,7 @@ header {
   justify-content: space-between;
 }
 
-.content-sidebar-left a,
-.btnBuy {
+.content-sidebar-left a, .btnBuy {
   text-decoration: none;
   display: inline-block;
   padding: 10px 15px;
@@ -96,8 +96,8 @@ a:hover {
 }
 
 /* footer  */
-html,
-body {
+
+html, body {
   height: 100%;
 }
 
@@ -201,7 +201,8 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
   -webkit-box-orient: vertical;
 }
 
@@ -209,7 +210,8 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
   -webkit-box-orient: vertical;
 }
 
@@ -246,7 +248,8 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 7; /* number of lines to show */
+  -webkit-line-clamp: 7;
+  /* number of lines to show */
   -webkit-box-orient: vertical;
 }
 
@@ -366,12 +369,11 @@ footer {
   padding: 14px;
 }
 
-.inputForm:hover,
-.inputForm:focus {
+.inputForm:hover, .inputForm:focus {
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.09);
 }
 
-.loginbtn{
+.loginbtn {
   background: rgb(38, 117, 38);
   color: #fff;
   cursor: pointer;
@@ -383,10 +385,119 @@ footer {
   text-transform: uppercase;
 }
 
-.loginPageMargin{
+.loginPageMargin {
   margin: 10px;
 }
 
-.marginTop{
+.marginTop {
   margin-top: 22px;
+}
+
+/* Modal window */
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+
+.close {
+  float:right;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.inputFormAddBook {
+  border: 2px solid rgb(66, 63, 63);
+  display: inline-block;
+  box-sizing: border-box;
+  height: 41px;
+  vertical-align: middle;
+  border-radius: 12px;
+  width: 550px;
+  padding: 14px;
+}
+
+textarea {
+  resize: none;
+  border: 2px solid rgb(66, 63, 63);
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-radius: 12px;
+  width: 550px;
+  padding: 14px;
+}
+
+.priceInputBook{
+  border: 2px solid rgb(66, 63, 63);
+  display: inline-block;
+  box-sizing: border-box;
+  height: 41px;
+  vertical-align: middle;
+  border-radius: 12px;
+  width: 272px;
+  padding: 14px;
+}
+
+.priceInputBook:first-child{
+  margin-right: 5px;
+}
+
+.priceInputBook:last-child{
+  margin-left: 5px;
+ 
+}
+
+.priceBook{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.btnsBook{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
