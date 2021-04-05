@@ -20,30 +20,22 @@
                 <hr class="line">
                 </hr>
 
+                <% for(let i=0; i < dataBook.length; i++) { %>
+                    <%  if(dataBook[i].oldPrice != null) { %>         
                 <div class='sale-book-item'>
 
                     <div class='descriptionSaleBook'>
-                        <h3 class='book-title'>The Lord of the Rings</h3>
+                        <h3 class='book-title'><%= dataBook[i].name %></h3>
                         <div class='text-sale'>
-                            <p>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J.
-                                R.R. Tolkien.</p>
-
-                            <p>Continuing the story begun in «The Hobbit», this is the first part of Tolkien’s epic
-                                masterpiece, «The Lord of the Rings»,
-                                featuring a striking black cover based on Tolkien’s own design, the definitive text, and
-                                a detailed map of Middle-earth.Sauron,
-                                the Dark Lord, has gathered to him all the Rings of Power — the means by which he
-                                intends to rule Middle-earth.</p>
+                            <p><%= dataBook[i].description %></p>
                         </div>
                     </div>
-
                     <div class='imageSaleBook'>
-                        <img src='/image/lordoftherings.png' class='imageBookShop' />
+                        <img src="<%= dataBook[i].img %>" class='imageBookShop' />
                         <div class='salePrice'>
-                            <h4 class='pricePadding'>56$</h4>
-                            <h4 class='pricePadding'>42$</h4>
+                            <h4 class='pricePadding'><%= dataBook[i].oldPrice %></h4>
+                            <h4 class='pricePadding'><%= dataBook[i].newPrice %></h4>
                         </div>
-
                         <div class='elem-padding'>
                             <a href='#' class='icon-padding'><i class="fas fa-pencil-alt"></i></a>
                             <a href='#' class='icon-padding'><i class="fas fa-times"></i></a>
@@ -51,44 +43,11 @@
                         <div class='elem-padding'>
                             <a href="/" type='button' class='bntBuyBookSale'><span>Buy</span></a>
                         </div>
-
                     </div>
                 </div>
+                <% } %>
+                <% } %>
 
-                <div class='sale-book-item'>
-
-                    <div class='descriptionSaleBook'>
-                        <h3 class='book-title'>The Lord of the Rings</h3>
-                        <div class='text-sale'>
-                            <p>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J.
-                                R.R. Tolkien.</p>
-
-                            <p>Continuing the story begun in «The Hobbit», this is the first part of Tolkien’s epic
-                                masterpiece, «The Lord of the Rings»,
-                                featuring a striking black cover based on Tolkien’s own design, the definitive text, and
-                                a detailed map of Middle-earth.Sauron,
-                                the Dark Lord, has gathered to him all the Rings of Power — the means by which he
-                                intends to rule Middle-earth.</p>
-                        </div>
-                    </div>
-
-                    <div class='imageSaleBook'>
-                        <img src='/image/lordoftherings.png' class='imageBookShop' />
-                        <div class='salePrice'>
-                            <h4 class='pricePadding'>56$</h4>
-                            <h4 class='pricePadding'>42$</h4>
-                        </div>
-
-                        <div class='elem-padding'>
-                            <a href='#' class='icon-padding'><i class="fas fa-pencil-alt"></i></a>
-                            <a href='#' class='icon-padding'><i class="fas fa-times"></i></a>
-                        </div>
-                        <div class='elem-padding'>
-                            <a href="/" type='button' class='bntBuyBookSale'><span>Buy</span></a>
-                        </div>
-
-                    </div>
-                </div>
 
             </div>
         </main>
@@ -97,10 +56,10 @@
     <footer>
         <%- include('./partials/footer'); %>
     </footer>
-<div class='modalSection'>
-    <%- include('./partials/modalWindowBook'); %>
-</div>
-        <script src='javascript/bookModalWindow.js'></script>
+    <div class='modalSection'>
+        <%- include('./partials/modalWindowBook'); %>
+    </div>
+    <script src='javascript/bookModalWindow.js'></script>
 </body>
 
 </html>

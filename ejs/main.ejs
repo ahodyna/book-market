@@ -22,100 +22,30 @@
 
                 <div class='book-item-wrap'>
 
-                    <div class='book-item'>
-                        <h3 class='book-title'>The Lord of the Rings</h3>
-                        <img src='/image/lordoftherings.png' class='imageBookShop' />
-                        <div class='block-price-edit'>
-                            <h4 class='icon-padding'>56$</h4>
-                            <a href='#' class='icon-padding'><i class="fas fa-pencil-alt"></i>
-                            </a>
-                            <a href='#' class='icon-padding'><i class="fas fa-times"></i></a>
-                        </div>
-                        <p class='text'>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R.
-                            R.
-                            Tolkien. </p>
-                        <a href="/" type='button' class="bntBuyBookShop"><span>Buy</span></a>
-                    </div>
 
-                    <div class='book-item'>
-                        <h3 class='book-title'>The Lord of the Rings</h3>
-                        <img src='/image/lordoftherings.png' class='imageBookShop' />
-                        <div class='block-price-edit'>
-                            <h4 class='icon-padding'>56$</h4>
-                            <a href='#' class='icon-padding'><i class="fas fa-pencil-alt"></i>
+                    <% for(let i=0; i < dataBook.length; i++) { %>
+                        <div class='book-item'>
+                            <h3 class='book-title'>
+                                <%= dataBook[i].name %>
+                            </h3>
+                            <img src="<%= dataBook[i].img %>"" class='imageBookShop' />
+                             <div class='block-price-edit'>
+                                <h4 class='icon-padding'><%= dataBook[i].newPrice %></h4>
+                                <a href='#' class='icon-padding'><i class=" fas fa-pencil-alt"></i>
                             </a>
                             <a href='#' class='icon-padding'><i class="fas fa-times"></i></a>
                         </div>
-                        <p class='text'>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R.
-                            R.
-                            Tolkien. </p>
-                        <a href="/" type='button' class="bntBuyBookShop"><span>Buy</span></a>
-                    </div>
-
-                    <div class='book-item'>
-                        <h3 class='book-title'>The Lord of the Rings</h3>
-                        <img src='/image/lordoftherings.png' class='imageBookShop' />
-                        <div class='block-price-edit'>
-                            <h4 class='icon-padding'>56$</h4>
-                            <a href='#' class='icon-padding'><i class="fas fa-pencil-alt"></i>
-                            </a>
-                            <a href='#' class='icon-padding'><i class="fas fa-times"></i></a>
-                        </div>
-                        <p class='text'>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R.
-                            R.
-                            Tolkien. </p>
-                        <a href="/" type='button' class="bntBuyBookShop"><span>Buy</span></a>
-                    </div>
-
-                    <div class='book-item'>
-                        <h3 class='book-title'>The Lord of the Rings</h3>
-                        <img src='/image/lordoftherings.png' class='imageBookShop' />
-                        <div class='block-price-edit'>
-                            <h4 class='icon-padding'>56$</h4>
-                            <a href='#' class='icon-padding'><i class="fas fa-pencil-alt"></i>
-                            </a>
-                            <a href='#' class='icon-padding'><i class="fas fa-times"></i></a>
-                        </div>
-                        <p class='text'>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R.
-                            R.
-                            Tolkien. </p>
-                        <a href="/" type='button' class="bntBuyBookShop"><span>Buy</span></a>
-                    </div>
-
-                    <div class='book-item'>
-                        <h3 class='book-title'>The Lord of the Rings</h3>
-                        <img src='/image/lordoftherings.png' class='imageBookShop' />
-                        <div class='block-price-edit'>
-                            <h4 class='icon-padding'>56$</h4>
-                            <a href='#' class='icon-padding'><i class="fas fa-pencil-alt"></i>
-                            </a>
-                            <a href='#' class='icon-padding'><i class="fas fa-times"></i></a>
-                        </div>
-                        <p class='text'>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R.
-                            R.
-                            Tolkien. </p>
-                        <a href="/" type='button' class="bntBuyBookShop"><span>Buy</span></a>
-                    </div>
-
-                    <div class='book-item'>
-                        <h3 class='book-title'>The Lord of the Rings</h3>
-                        <img src='/image/lordoftherings.png' class='imageBookShop' />
-                        <div class='block-price-edit'>
-                            <h4 class='icon-padding'>56$</h4>
-                            <a href='#' class='icon-padding'><i class="fas fa-pencil-alt"></i>
-                            </a>
-                            <a href='#' class='icon-padding'><i class="fas fa-times"></i></a>
-                        </div>
-                        <p class='text'>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R.
-                            R.
-                            Tolkien. 
+                        <p class='text'>
+                            <%= dataBook[i].description %>
                         </p>
                         <a href="/" type='button' class="bntBuyBookShop"><span>Buy</span></a>
-                    </div>
-
                 </div>
+
+
+                <% } %>
             </div>
-        </main>
+    </div>
+    </main>
     </div>
 
 
