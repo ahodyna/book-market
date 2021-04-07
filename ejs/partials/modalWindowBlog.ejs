@@ -8,25 +8,25 @@
 
       <div class='loginPageMargin marginTop'>
         <p class="titleFieldAddBooks">Title</p>
-        <input class='inputFormAddBook' type='text'>
+        <input class='inputFormAddBook' type='text' id='inputTitleBlog'>
       </div>
 
       <div class='loginPageMargin'>
         <p class="titleFieldAddBooks">Image</p>
-        <input class='inputFormAddBook' type='text'>
+        <input class='inputFormAddBook' type='text'  id='inputImgBlog'>
       </div>
 
       <div class='loginPageMargin'>
         <p class="titleFieldAddBooks">Description text</p>
-        <textarea name="description" cols="40" rows="3"></textarea></p>
+        <textarea  id='textareaDescriptionBlog' name="description" cols="40" rows="3"></textarea></p>
       </div>
 
       <div class='btnsBook'>
         <div class='loginPageMargin'>
-          <a class='loginbtn' href='#' type='button'><span>Create</span></a>
+          <a class='loginbtn' href='#' type='button' onclick="createBlogItem()"><span>Create</span></a>
         </div>
         <div class='loginPageMargin'>
-          <a class='loginbtn' href='#' type='button'><span>Abort</span></a>
+          <a class='loginbtn' href='#' type='button' onclick="goToBlogPage()"><span>Abort</span></a>
         </div>
 
       </div>

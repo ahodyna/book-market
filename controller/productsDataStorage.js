@@ -42,7 +42,6 @@ export default {
         return data
     },
     createProduct: function (product) {
-        console.log('product1: ' + product)
         product.id = 'a' + Math.ceil((Math.random() * 1000000))
         data.push(product)
         return product
