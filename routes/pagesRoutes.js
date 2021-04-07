@@ -1,10 +1,11 @@
 import { Router } from 'express';
-import productsDataStorage  from '../controller/productsDataStorage.js'
+import productsDataStorage from '../controller/productsDataStorage.js'
+import blogDataStorage from '../controller/blogDataStorage.js'
 
 const router = Router();
 
 router.get('/', (req, res) => {
-  res.render('main', {dataBook: productsDataStorage.getAll()})
+  res.render('main', { dataBook: productsDataStorage.getAll() })
 })
 
 router.get('/delivery', (req, res) => {
@@ -12,11 +13,11 @@ router.get('/delivery', (req, res) => {
 })
 
 router.get('/sale', (req, res) => {
-  res.render('sale', {dataBook: productsDataStorage.getAll()})
+  res.render('sale', { dataBook: productsDataStorage.getAll() })
 })
 
 router.get('/blog', (req, res) => {
-  res.render('blog')
+  res.render('blog', { dataBlog: blogDataStorage.getItemBlog() })
 })
 
 router.get('/basket', (req, res) => {
@@ -25,6 +26,21 @@ router.get('/basket', (req, res) => {
 
 router.get('/login', (req, res) => {
   res.render('login')
+})
+
+
+// post
+
+router.post('/books', (req, res) => {
+  const item = req.body
+  const createdItem = productsDataStorage.createProduct(item)
+   res.json(createdItem)
+  
+})
+ router.post('/blogItem', (req, res) => {
+  const item = req.body;
+  const createdItem = blogDataStorage.createBlogItem(item)
+  res.json(createdItem)
 })
 
 export default router
