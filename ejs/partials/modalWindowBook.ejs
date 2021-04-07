@@ -9,43 +9,43 @@
 
       <div class='loginPageMargin marginTop'>
         <p class="titleFieldAddBooks">Title</p>
-        <input class='inputFormAddBook' type='text'>
+        <input class='inputFormAddBook' type='text' id="inputTitleBook">
       </div>
 
       <div class='loginPageMargin'>
         <p class="titleFieldAddBooks">Short description</p>
-        <input class='inputFormAddBook' type='text'>
+        <input class='inputFormAddBook' type='text' id="inputShortDescriptionBook">
       </div>
 
       <div class='loginPageMargin priceBook'>
         <div>
           <p class="titleFieldAddBooks">Old price</p>
-          <input class='priceInputBook' type='text'>
+          <input class='priceInputBook' type='text' id="inputOldPriceBook">
         </div>
 
         <div>
           <p class="titleFieldAddBooks">New price</p>
-          <input class='priceInputBook' type='text'>
+          <input class='priceInputBook' type='text'id="inputNewPriceBook">
         </div>
       </div>
 
 
       <div class='loginPageMargin'>
         <p class="titleFieldAddBooks">Image</p>
-        <input class='inputFormAddBook' type='text'>
+        <input class='inputFormAddBook' type='text' id="inputImgBook">
       </div>
 
       <div class='loginPageMargin'>
         <p class="titleFieldAddBooks">Description text</p>
-        <textarea name="description" cols="40" rows="3"></textarea></p>
+        <textarea id="textareaDescriptionBook" name="description" cols="40" rows="3"></textarea></p>
       </div>
 
       <div class='btnsBook'>
         <div class='loginPageMargin'>
-          <a class='loginbtn' href='#' type='button'><span>Create</span></a>
+          <a class='loginbtn' href='#' type='button' onclick="createBook()"><span>Create</span></a>
         </div>
         <div class='loginPageMargin'>
-          <a class='loginbtn' href='#' type='button'><span>Abort</span></a>
+          <a class='loginbtn' href='#' type='button' onclick="goToSalePage()"><span>Abort</span></a>
         </div>
 
       </div>
