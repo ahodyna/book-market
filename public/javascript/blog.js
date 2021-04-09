@@ -9,7 +9,7 @@ function createBlogItem() {
         image: document.getElementById('inputImgBlog').value,
         description: document.getElementById('textareaDescriptionBlog').value
     }
-    fetch('/blogItem', {
+    fetch('/blog-items', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
@@ -22,3 +22,24 @@ function createBlogItem() {
             document.getElementById('textareaDescriptionBlog').value = ''
         })
 }
+
+
+function addNewBlog() {
+    let modalAddBlog = document.getElementById("modalAddBlog");
+    modalAddBlog.style.display = "block";
+}
+
+
+function closeModalAddBlog() {
+    let modalAddBlog = document.getElementById("modalAddBlog");
+  modalAddBlog.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    let modalAddBlog = document.getElementById("modalAddBlog");
+
+  if (event.target == modalAddBlog) {
+    modalAddBlog.style.display = "none";
+  }
+} 

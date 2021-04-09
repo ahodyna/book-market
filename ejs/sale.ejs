@@ -14,7 +14,10 @@
         <main class='wrap-content'>
 
             <div class='content'>
-                <h2 class="content-title">Sale<a id="btnAddNewBook" type='button'><span class='btnBuy'>New</span></a>
+                <h2 class="content-title">Sale
+                    <a onclick="addNewBook()" type='button'>
+                        <span class='btnBuy'>New</span>
+                    </a>
                 </h2>
 
                 <hr class="line">
@@ -45,7 +48,8 @@
                                     </h4>
                                 </div>
                                 <div class='elem-padding'>
-                                    <a href='#' class='icon-padding'><i class="fas fa-pencil-alt"></i></a>
+                                    <a type='button' class='icon-padding ' onclick='editBook( <%= dataBook[i].id %>)'><i
+                                            class="fas fa-pencil-alt"></i></a>
                                     <a href='#' class='icon-padding'><i class="fas fa-times"></i></a>
                                 </div>
                                 <div class='elem-padding'>
@@ -65,10 +69,16 @@
         <%- include('./partials/footer'); %>
     </footer>
     <div class='modalSection'>
-        <%- include('./partials/modalWindowBook'); %>
+        <div>
+            <%- include('./partials/modalWindowEditBook'); %>
+        </div>
+        <div>
+            <%- include('./partials/modalWindowBook'); %>
+        </div>
+
     </div>
-    <script src='javascript/bookModalWindow.js'></script>
-    <script src='javascript/addBook.js'></script>
+    <script src='javascript/book.js'></script>
+
 </body>
 
 </html>

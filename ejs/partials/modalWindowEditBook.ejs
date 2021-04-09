@@ -1,51 +1,50 @@
-<div id="modalAddBook" class="modal">
+<div id="modalEditBook" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeModalAddBook()">&times;</span>
-    
+    <span class="close" onclick="closeModalEditBook()">&times;</span>
     <div>
-      <h2 class="content-title">New Book</h2>
+      <h2 class="content-title">Edit Book</h2>
       <hr class="line">
       </hr>
 
       <div class='loginPageMargin marginTop'>
         <p class="titleFieldAddBooks">Title</p>
-        <input class='inputFormAddBook' type='text' id="inputTitleBook">
+        <input class='inputFormAddBook' type='text' id="inputTitleEditBook">
       </div>
 
       <div class='loginPageMargin'>
         <p class="titleFieldAddBooks">Short description</p>
-        <input class='inputFormAddBook' type='text' id="inputShortDescriptionBook">
+        <input class='inputFormAddBook' type='text' id="inputShortDescriptionEditBook">
       </div>
 
       <div class='loginPageMargin priceBook'>
         <div>
           <p class="titleFieldAddBooks">Old price</p>
-          <input class='priceInputBook' type='text' id="inputOldPriceBook">
+          <input class='priceInputBook' type='text' id="inputOldPriceEditBook">
         </div>
 
         <div>
           <p class="titleFieldAddBooks">New price</p>
-          <input class='priceInputBook' type='text'id="inputNewPriceBook">
+          <input class='priceInputBook' type='text' id="inputNewPriceEditBook">
         </div>
       </div>
 
 
       <div class='loginPageMargin'>
         <p class="titleFieldAddBooks">Image</p>
-        <input class='inputFormAddBook' type='text' id="inputImgBook">
+        <input class='inputFormAddBook' type='text' id="inputImgEditBook">
       </div>
 
       <div class='loginPageMargin'>
         <p class="titleFieldAddBooks">Description text</p>
-        <textarea id="textareaDescriptionBook" name="description" cols="40" rows="3"></textarea></p>
+        <textarea id="textareaDescriptionEditBook" name="description" cols="40" rows="3"></textarea></p>
       </div>
 
       <div class='btnsBook'>
         <div class='loginPageMargin'>
-          <a class='loginbtn' href='#' type='button' onclick="createBook()"><span>Create</span></a>
+          <!-- <a class='loginbtn' href='#' type='button' onclick="createBook()"><span>Create</span></a> -->
         </div>
         <div class='loginPageMargin'>
-          <a class='loginbtn' href='#' type='button' onclick="closeModalAddBook()"><span>Abort</span></a>
+          <a class='loginbtn' href='#' type='button' onclick="closeModalEditBook()"><span>Abort</span></a>
         </div>
 
       </div>

@@ -34,13 +34,27 @@ router.get('/login', (req, res) => {
 router.post('/books', (req, res) => {
   const item = req.body
   const createdItem = productsDataStorage.createProduct(item)
-   res.json(createdItem)
-  
+  res.json(createdItem)
+
 })
- router.post('/blogItem', (req, res) => {
+router.post('/blog-items', (req, res) => {
   const item = req.body;
   const createdItem = blogDataStorage.createBlogItem(item)
   res.json(createdItem)
 })
+
+
+// get by id
+
+router.get('/books/:id', (req, res) => {
+  console.log('req.params.id', req.params.id)
+  const product = productsDataStorage.getProduct(req.params.id)
+  
+  console.log(product)
+  res.json(product)
+})
+
+
+
 
 export default router

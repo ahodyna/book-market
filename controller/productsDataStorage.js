@@ -45,5 +45,9 @@ export default {
         product.id = 'a' + Math.ceil((Math.random() * 1000000))
         data.push(product)
         return product
+    },
+    getProduct: (id) => {
+      return data.find(elem => elem.id === id)
+
     }
 }
