@@ -58,5 +58,12 @@ export default {
             }
         }
         return null
+    },
+    deleteProduct: function (id) {
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].id === id) {
+                return data.splice(i, 1)
+            }
+        }
     }
 }

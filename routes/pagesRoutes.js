@@ -51,11 +51,15 @@ router.get('/books/:id', (req, res) => {
 })
 
 // put 
-
 router.put('/books/:id', (req, res) => {
- 
-  const updatedItem = productsDataStorage.updateProduct(req.params.id, req.body) 
+  const updatedItem = productsDataStorage.updateProduct(req.params.id, req.body)
   res.json(updatedItem)
+})
+
+// delete
+router.delete('/books/:id', (req, res) => {
+  const deletedItem = productsDataStorage.deleteProduct(req.params.id)
+  res.json(deletedItem)
 })
 
 

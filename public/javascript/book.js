@@ -77,10 +77,10 @@ window.onclick = function (event) {
 
 }
 
-function updateBook(){
+function updateBook() {
   let bookId = document.getElementById('modalEditBook').getAttribute('data-book-id');
   let data = {
-    id:  bookId,
+    id: bookId,
     img: document.getElementById('inputImgEditBook').value,
     name: document.getElementById('inputTitleEditBook').value,
     oldPrice: document.getElementById('inputOldPriceEditBook').value,
@@ -90,17 +90,29 @@ function updateBook(){
   }
 
   fetch(`/books/${bookId}`, {
-  method: 'PUT',
-  headers: {
-    'Content-Type': 'application/json;charset=utf-8'
-  },
-  body: JSON.stringify(data)
-})
-.then(()=>{
-  let modalEdit = document.getElementById("modalEditBook");
-  modalEdit.style.display = "none";
-})
-.then(()=>{
-  window.location = '/sale'
-})
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: JSON.stringify(data)
+  })
+    .then(() => {
+      let modalEdit = document.getElementById("modalEditBook");
+      modalEdit.style.display = "none";
+    })
+    .then(() => {
+      window.location = '/sale'
+    })
+}
+
+function deleteBook(id) {
+  fetch(`/books/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+    }
+  })
+    .then(() => {
+      window.location = '/sale'
+    })
 }
