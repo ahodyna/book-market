@@ -16,7 +16,7 @@
             <div class='content'>
                 <h2 class="content-title">Sale
                     <a onclick="addNewBook()" type='button'>
-                        <span class='btnBuy'>New</span>
+                        <span class='btnAdd'>New</span>
                     </a>
                 </h2>
 
@@ -49,8 +49,8 @@
                                 </div>
                                 <div class='elem-padding'>
                                     <a href='#' type='button' class='icon-padding '
-                                        onclick='editBook( <%= dataBook[i].id %>)'><i class="fas fa-pencil-alt"></i></a>
-                                    <a href='#' class='icon-padding' onclick='deleteBook( <%= dataBook[i].id %>)'><i
+                                        onclick="editBook( '<%= dataBook[i].id %>')"><i class="fas fa-pencil-alt"></i></a>
+                                    <a href='#' class='icon-padding' onclick="deleteBook( '<%= dataBook[i].id %>')"><i
                                             class="fas fa-times"></i></a>
                                 </div>
                                 <div class='elem-padding'>

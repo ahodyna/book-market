@@ -36,6 +36,9 @@ function createBook() {
         document.getElementById('textareaDescriptionBook').value = '',
         document.getElementById('inputShortDescriptionBook').value = ''
     })
+    .then(() => {
+      document.location.reload()
+    })
 }
 
 function editBook(id) {
@@ -101,7 +104,7 @@ function updateBook() {
       modalEdit.style.display = "none";
     })
     .then(() => {
-      location.reload()
+      document.location.reload()
     })
 }
 
@@ -113,6 +116,6 @@ function deleteBook(id) {
     }
   })
     .then(() => {
-      location.reload()
+      document.location.reload()
     })
 }

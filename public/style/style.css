@@ -30,18 +30,18 @@ header {
   width: 100%;
 }
 
-.tmp {
+.content-header-div-wrap {
   max-width: 60%;
   text-align: center;
   display: inline-block;
 }
 
-.tmp2 {
+.content-header-div-wrap-flex{
   display: flex;
   justify-content: space-between;
 }
 
-.content-sidebar-left a, .btnBuy {
+.content-sidebar-left a, .btnAdd {
   text-decoration: none;
   display: inline-block;
   padding: 10px 15px;
@@ -53,7 +53,7 @@ header {
 }
 
 a:hover {
-  color: rgb(70, 59, 97);
+  color:  rgb(179, 137, 137);
 }
 
 .content-sidebar-right a {
@@ -167,12 +167,12 @@ footer {
 }
 
 .bntBuyBookShop:hover {
-  background: rgb(70, 59, 97);
+  background:  rgb(179, 137, 137);
   color: #fff;
   transition: 0.5s;
 }
 
-.btnBuy {
+.btnAdd {
   background: rgb(87, 85, 85);
   color: #fff;
   cursor: pointer;
@@ -182,8 +182,8 @@ footer {
   margin: 0 0 4px 25px;
 }
 
-.btnBuy:hover {
-  background: rgb(70, 59, 97);
+.btnAdd:hover {
+  background: rgb(179, 137, 137);
   color: #fff;
   transition: 0.5s;
 }
@@ -271,8 +271,8 @@ footer {
   text-transform: uppercase;
 }
 
-.bntBuyBookShop:hover {
-  background: rgb(70, 59, 97);
+.bntBuyBookSale:hover {
+  background:  rgb(179, 137, 137);
   color: #fff;
   transition: 0.5s;
 }
@@ -329,7 +329,7 @@ footer {
 /* Basket */
 
 .removeBook {
-  background: rgb(170, 92, 46);
+  background:  rgb(165, 147, 147);
   color: #fff;
   cursor: pointer;
   border-radius: 22px;
@@ -341,7 +341,7 @@ footer {
 }
 
 .removeBook:hover {
-  background: rgb(192, 74, 6);
+  background: rgb(179, 137, 137);
   color: #fff;
 }
 
@@ -381,7 +381,7 @@ footer {
 }
 
 .loginbtn {
-  background: rgb(38, 117, 38);
+  background: rgb(179, 137, 137);
   color: #fff;
   cursor: pointer;
   border-radius: 12px;
@@ -390,6 +390,12 @@ footer {
   margin: 20px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.loginbtn:hover {
+  background: rgb(184, 167, 167);
+  color: #fff; 
+  transition: 0.5s;
 }
 
 .loginPageMargin {

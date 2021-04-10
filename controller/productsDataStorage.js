@@ -43,6 +43,7 @@ export default {
     },
     createProduct: function (product) {
         product.id = 'a' + Math.ceil((Math.random() * 1000000))
+        console.log('product', product)
         data.push(product)
         return product
     },
@@ -65,5 +66,6 @@ export default {
                 return data.splice(i, 1)
             }
         }
+        return null
     }
 }
