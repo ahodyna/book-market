@@ -101,7 +101,7 @@ function updateBook() {
       modalEdit.style.display = "none";
     })
     .then(() => {
-      window.location = '/sale'
+      location.reload()
     })
 }
 
@@ -113,6 +113,6 @@ function deleteBook(id) {
     }
   })
     .then(() => {
-      window.location = '/sale'
+      location.reload()
     })
 }
