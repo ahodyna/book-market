@@ -45,15 +45,18 @@ router.post('/blog-items', (req, res) => {
 
 
 // get by id
-
 router.get('/books/:id', (req, res) => {
-  console.log('req.params.id', req.params.id)
   const product = productsDataStorage.getProduct(req.params.id)
-  
-  console.log(product)
   res.json(product)
 })
 
+// put 
+
+router.put('/books/:id', (req, res) => {
+ 
+  const updatedItem = productsDataStorage.updateProduct(req.params.id, req.body) 
+  res.json(updatedItem)
+})
 
 
 

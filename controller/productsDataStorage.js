@@ -47,7 +47,16 @@ export default {
         return product
     },
     getProduct: (id) => {
-      return data.find(elem => elem.id === id)
-
+        return data.find(elem => elem.id === id)
+    },
+    updateProduct: function (id, product) {
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].id === id) {
+                product.id = id;
+                data[i] = product
+                return data[i]
+            }
+        }
+        return null
     }
 }

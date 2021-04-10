@@ -1,4 +1,3 @@
-
 function addNewBook() {
   let modalAddBook = document.getElementById("modalAddBook");
   modalAddBook.style.display = "block";
@@ -39,8 +38,6 @@ function createBook() {
     })
 }
 
-
-
 function editBook(id) {
 
   let modalEdit = document.getElementById("modalEditBook");
@@ -51,6 +48,7 @@ function editBook(id) {
       return response.json()
     })
     .then((data) => {
+      document.getElementById('modalEditBook').setAttribute('data-book-id', id);
       document.getElementById('inputImgEditBook').value = data.img;
       document.getElementById('inputTitleEditBook').value = data.name;
       document.getElementById('inputOldPriceEditBook').value = data.oldPrice;
@@ -60,8 +58,6 @@ function editBook(id) {
     })
 
 }
-
-
 
 function closeModalEditBook() {
   let modalEditBook = document.getElementById("modalEditBook");
@@ -79,4 +75,32 @@ window.onclick = function (event) {
     closeModalAddBook()
   }
 
+}
+
+function updateBook(){
+  let bookId = document.getElementById('modalEditBook').getAttribute('data-book-id');
+  let data = {
+    id:  bookId,
+    img: document.getElementById('inputImgEditBook').value,
+    name: document.getElementById('inputTitleEditBook').value,
+    oldPrice: document.getElementById('inputOldPriceEditBook').value,
+    newPrice: document.getElementById('inputNewPriceEditBook').value,
+    description: document.getElementById('textareaDescriptionEditBook').value,
+    shortDescription: document.getElementById('inputShortDescriptionEditBook').value
+  }
+
+  fetch(`/books/${bookId}`, {
+  method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8'
+  },
+  body: JSON.stringify(data)
+})
+.then(()=>{
+  let modalEdit = document.getElementById("modalEditBook");
+  modalEdit.style.display = "none";
+})
+.then(()=>{
+  window.location = '/sale'
+})
 }

@@ -238,10 +238,16 @@ footer {
   background-color: #f1f1f1;
   margin: 15px;
   padding: 25px 10px 20px 10px;
+  width: 100%;
 }
 
 .imageSaleBook {
-  padding-left: 20px;
+  padding-left: 10px;
+  width: 15%;
+}
+
+.descriptionSaleBook{
+  width: 85%;
 }
 
 .text-sale {
@@ -251,6 +257,7 @@ footer {
   -webkit-line-clamp: 7;
   /* number of lines to show */
   -webkit-box-orient: vertical;
+  
 }
 
 .bntBuyBookSale {
