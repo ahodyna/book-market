@@ -526,3 +526,25 @@ textarea {
   justify-content: center;
   flex-direction: row;
 }
+
+/* pages */
+
+.page-list{
+  display: flex;
+  justify-content: center;
+}
+
+.page-margin{
+margin: 10px;
+}
+
+.page-button{
+  background-color: rgb(202, 199, 199);
+  color: black;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.page-button span{
+  padding: 7px;
+}
