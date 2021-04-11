@@ -301,6 +301,7 @@ footer {
 .wrapBlogItems {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .titleBlog {
@@ -313,17 +314,37 @@ footer {
 .contentSectionBlog {
   display: flex;
   flex-direction: row-reverse;
+  padding: 10px 10px 20px 10px;
   width: 100%;
-  padding: 10px 20px 10px 20px;
 }
 
 .imageBlog {
   padding-right: 10px;
+  width: 25%;
+  height: 80%;
+}
+
+.descriptionBlog{
+  width: 75%;
+}
+
+.image-blog-flex{
+  width: 100%;
+  height: 100%;
 }
 
 .imageBlog img {
-  height: 250px;
-  width: 320px;
+  height: 80%;
+  width: 95%;
+}
+
+.text-blog {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 /* Basket */

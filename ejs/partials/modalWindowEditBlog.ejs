@@ -1,0 +1,36 @@
+<div id="modalEditBlog" class="modal" data-blog-id>
+  <div class="modal-content">
+    <span class="close" onclick="closeModalEditBlog()">&times;</span>
+    <div>
+      <h2 class="content-title">Edit Blog</h2>
+      <hr class="line">
+      </hr>
+
+      <div class='loginPageMargin marginTop'>
+        <p class="titleFieldAddBooks">Title</p>
+        <input class='inputFormAddBook' type='text' id='inputTitleEditBlog'>
+      </div>
+
+      <div class='loginPageMargin'>
+        <p class="titleFieldAddBooks">Image</p>
+        <input class='inputFormAddBook' type='text'  id='inputImgEditBlog'>
+      </div>
+
+      <div class='loginPageMargin'>
+        <p class="titleFieldAddBooks">Description text</p>
+        <textarea  id='textareaDescriptionEditBlog' name="description" cols="40" rows="3"></textarea></p>
+      </div>
+
+      <div class='btnsBook'>
+        <div class='loginPageMargin'>
+          <a class='loginbtn' href='#' type='button' onclick="updateBlog()"><span>Update</span></a>
+        </div>
+        <div class='loginPageMargin'>
+          <a class='loginbtn' href='#' type='button' onclick="goToBlogPage()"><span>Abort</span></a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>

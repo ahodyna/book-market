@@ -20,12 +20,33 @@ let blogData = [
 ]
 
 export default {
-    getItemBlog: () => {
+    getAllBlog: () => {
         return blogData
     },
     createBlogItem: function (item) {
         item.id = 'c' + Math.ceil((Math.random() * 100000));
         blogData.push(item)
         return item
+    },
+    getBlogItem: (id) => {
+        return blogData.find(elem => elem.id === id)
+    },
+    updateBlogItem: function (id, blog) {
+        for (let i = 0; i < blogData.length; i++) {
+            if (blogData[i].id === id) {
+                blogData.id = id;
+                blogData[i] = blog
+                return blogData[i]
+            }
+        }
+        return null
+    },
+    deleteBlogItem: function (id) {
+        for (let i = 0; i < blogData.length; i++) {
+            if (blogData[i].id === id) {
+                return blogData.splice(i, 1)
+            }
+        }
+        return null
     }
 }

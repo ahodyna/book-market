@@ -28,23 +28,32 @@
                         <div class='blogItem'>
 
                             <div class='titleBlog'>
-                                <h3><%= dataBlog[i].title %></h3>
+                                <h3>
+                                    <%= dataBlog[i].title %>
+                                </h3>
                                 <div class='elem-padding'>
-                                    <a href='#' class='icon-padding'><i class="fas fa-pencil-alt"></i></a>
+                                    <a href='#' class='icon-padding' onclick="editBlog('<%= dataBlog[i].id %>')"><i
+                                            class="fas fa-pencil-alt"></i></a>
                                 </div>
                                 <div class='elem-padding'>
-                                    <a href='#' class='icon-padding'><i class="fas fa-times"></i></a>
+                                    <a href='#' class='icon-padding' onclick="deleteBlog('<%= dataBlog[i].id %>')"><i
+                                            class="fas fa-times"></i></a>
                                 </div>
                             </div>
                             <div class='contentSectionBlog'>
                                 <div class='descriptionBlog'>
                                     <div>
-                                        <p><%= dataBlog[i].description %></p>
+                                        <p class="text-blog">
+                                            <%= dataBlog[i].description %>
+                                        </p>
 
                                     </div>
                                 </div>
                                 <div class='imageBlog'>
-                                    <img src="<%= dataBlog[i].image %>"  />
+                                    <div class='image-blog-flex'>
+                                        <img src="<%= dataBlog[i].image %>" />
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -58,8 +67,17 @@
     <footer>
         <%- include('./partials/footer'); %>
     </footer>
-    <%- include('./partials/modalWindowBlog'); %>
-        <script src='javascript/blog.js'></script>
+    <div class='modalSection'>
+        <div>
+            <%- include('./partials/modalWindowEditBlog'); %>
+        </div>
+        <div>
+            <%- include('./partials/modalWindowBlog'); %>
+        </div>
+
+    </div>
+
+    <script src='javascript/blog.js'></script>
 </body>
 
 </html>
