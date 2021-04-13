@@ -4,8 +4,17 @@ import blogDataStorage from '../controller/blogDataStorage.js'
 
 const router = Router();
 
+const itemsPerPage = 6;
+
 router.get('/', (req, res) => {
-  res.render('main', { dataBook: productsDataStorage.getAll() })
+  const booksAmount = productsDataStorage.count({});
+  const pageNumber = req.query.page? req.query.page: 1
+  const filter = { }
+  const books = productsDataStorage.getPage(pageNumber, itemsPerPage, filter);
+  res.render('main', {
+    pagesAmount: Math.ceil(booksAmount / itemsPerPage),
+    dataBook: books
+  }); 
 })
 
 router.get('/delivery', (req, res) => {
@@ -13,7 +22,15 @@ router.get('/delivery', (req, res) => {
 })
 
 router.get('/sale', (req, res) => {
-  res.render('sale', { dataBook: productsDataStorage.getAll() })
+  const booksAmount = productsDataStorage.count({ discount: true });
+  const pageNumber = req.query.page? req.query.page: 1
+  const filter = { discount: true }
+  const books = productsDataStorage.getPage(pageNumber, itemsPerPage, filter);
+  console.log('books',books)
+  res.render('sale', {
+    pagesAmount: Math.ceil(booksAmount / itemsPerPage),
+    dataBook: books
+  }); 
 })
 
 router.get('/blog', (req, res) => {

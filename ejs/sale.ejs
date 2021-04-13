@@ -67,27 +67,14 @@
         </main>
     </div>
     <div class='page-list'>
-        <div class='page-margin'>
-            <a href="#" type='button' class='page-button'><span>1</span></a>
-        </div>
-        <div class='page-margin'>
-            <a href="#" type='button' class='page-button'><span>2</span></a>
-        </div>
-        <div class='page-margin'>
-            <a href="#" type='button' class='page-button'><span>3</span></a>
-        </div>
-        <div class='page-margin'>
-            <a href="#" type='button' class='page-button'><span>...</span></a>
-        </div>
-        <div class='page-margin'>
-            <a href="#" type='button' class='page-button'><span>11</span></a>
-        </div>
-        <div class='page-margin'>
-            <a href="#" type='button' class='page-button'><span>12</span></a>
-        </div>
+        <% for(let i=0; i < pagesAmount; i++) { %>
+            <div class='page-margin'>
+                <a href="?page=<%= i+1 %>" type='button' class='page-button'><span>
+                        <%= i+1 %>
+                    </span></a>
+            </div>
+            <% } %>
     </div>
-
-
 
     <footer>
         <%- include('./partials/footer'); %>
