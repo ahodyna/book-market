@@ -23,6 +23,18 @@ export default {
     getAllBlog: () => {
         return blogData
     },
+    getPageBlog: (page, itemsPerPage) => {
+        let result = blogData;
+        let arr = []
+
+        let firstIndex = itemsPerPage * (page - 1)
+        let lastIndex = firstIndex + itemsPerPage - 1
+
+        for (let i = firstIndex; i <= lastIndex && i < result.length; i++) {
+            arr.push(result[i])
+        }
+        return arr;
+    },
     createBlogItem: function (item) {
         item.id = 'c' + Math.ceil((Math.random() * 100000));
         blogData.push(item)
@@ -48,5 +60,9 @@ export default {
             }
         }
         return null
+    },
+    count: () => {
+        let arr = blogData;
+        return arr.length;
     }
 }

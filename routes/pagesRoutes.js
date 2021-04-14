@@ -33,9 +33,22 @@ router.get('/sale', (req, res) => {
   }); 
 })
 
+// router.get('/blog', (req, res) => {
+//   res.render('blog', { dataBlog: blogDataStorage.getAllBlog() })
+// })
+
 router.get('/blog', (req, res) => {
-  res.render('blog', { dataBlog: blogDataStorage.getAllBlog() })
+  const blogItemsAmount = blogDataStorage.count({});
+  const pageNumber = req.query.page? req.query.page: 1
+
+  const posts = blogDataStorage.getPageBlog(pageNumber, itemsPerPage);
+  res.render('blog', {
+    pagesAmount: Math.ceil(blogItemsAmount / itemsPerPage),
+    dataBlog: posts
+  }); 
 })
+
+
 
 router.get('/basket', (req, res) => {
   res.render('basket')
