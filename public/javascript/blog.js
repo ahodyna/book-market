@@ -9,7 +9,7 @@ function createBlogItem() {
         image: document.getElementById('inputImgBlog').value,
         description: document.getElementById('textareaDescriptionBlog').value
     }
-    fetch('/blog-items', {
+    fetch('/admin/blog-items', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
@@ -49,7 +49,7 @@ function editBlog(id) {
     let modalEdit = document.getElementById("modalEditBlog");
     modalEdit.style.display = "block";
   
-    fetch(`/blogs/${id}`)
+    fetch(`/admin/blogs/${id}`)
       .then((response) => {
         console.log('response', response)
         return response.json()
@@ -88,7 +88,7 @@ function updateBlog() {
  
     }
   
-    fetch(`/blogs/${blogId}`, {
+    fetch(`/admin/blogs/${blogId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json;charset=utf-8'
@@ -105,7 +105,7 @@ function updateBlog() {
   }
   
   function deleteBlog(id) {
-    fetch(`/blogs/${id}`, {
+    fetch(`/admin/blogs/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json;charset=utf-8'

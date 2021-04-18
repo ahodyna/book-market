@@ -16,9 +16,11 @@
             <div class='content'>
                 <h2 class="content-title">
                     Blog
-                    <a onclick="addNewBlog()" type='button'>
-                        <span class='btnAdd'>New</span>
-                    </a>
+                    <% if (user && user.role && user.role=='ADMIN' ) { %>
+                        <a onclick="addNewBlog()" type='button'>
+                            <span class='btnAdd'>New</span>
+                        </a>
+                        <% } %>
                 </h2>
                 <hr class="line">
                 </hr>
@@ -31,14 +33,17 @@
                                 <h3>
                                     <%= dataBlog[i].title %>
                                 </h3>
-                                <div class='elem-padding'>
-                                    <a href='#' class='icon-padding' onclick="editBlog('<%= dataBlog[i].id %>')"><i
-                                            class="fas fa-pencil-alt"></i></a>
-                                </div>
-                                <div class='elem-padding'>
-                                    <a href='#' class='icon-padding' onclick="deleteBlog('<%= dataBlog[i].id %>')"><i
-                                            class="fas fa-times"></i></a>
-                                </div>
+                                <% if (user && user.role && user.role=='ADMIN' ) { %>
+                                    <div class='elem-padding'>
+                                        <a href='#' class='icon-padding' onclick="editBlog('<%= dataBlog[i].id %>')"><i
+                                                class="fas fa-pencil-alt"></i></a>
+                                    </div>
+                                    <div class='elem-padding'>
+                                        <a href='#' class='icon-padding'
+                                            onclick="deleteBlog('<%= dataBlog[i].id %>')"><i
+                                                class="fas fa-times"></i></a>
+                                    </div>
+                                    <% } %>
                             </div>
                             <div class='contentSectionBlog'>
                                 <div class='descriptionBlog'>

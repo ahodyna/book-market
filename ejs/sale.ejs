@@ -15,9 +15,11 @@
 
             <div class='content'>
                 <h2 class="content-title">Sale
-                    <a onclick="addNewBook()" type='button'>
-                        <span class='btnAdd'>New</span>
-                    </a>
+                    <% if (user && user.role && user.role=='ADMIN' ) { %>
+                        <a onclick="addNewBook()" type='button'>
+                            <span class='btnAdd'>New</span>
+                        </a>
+                        <% } %>
                 </h2>
 
                 <hr class="line">
@@ -47,16 +49,19 @@
                                         <%= dataBook[i].newPrice %>
                                     </h4>
                                 </div>
-                                <div class='elem-padding'>
-                                    <a href='#' type='button' class='icon-padding '
-                                        onclick="editBook( '<%= dataBook[i].id %>')"><i
-                                            class="fas fa-pencil-alt"></i></a>
-                                    <a href='#' class='icon-padding' onclick="deleteBook( '<%= dataBook[i].id %>')"><i
-                                            class="fas fa-times"></i></a>
-                                </div>
-                                <div class='elem-padding'>
-                                    <a href="/" type='button' class='bntBuyBookSale'><span>Buy</span></a>
-                                </div>
+                                <% if (user && user.role && user.role=='ADMIN' ) { %>
+                                    <div class='elem-padding'>
+                                        <a href='#' type='button' class='icon-padding '
+                                            onclick="editBook( '<%= dataBook[i].id %>')"><i
+                                                class="fas fa-pencil-alt"></i></a>
+                                        <a href='#' class='icon-padding'
+                                            onclick="deleteBook( '<%= dataBook[i].id %>')"><i
+                                                class="fas fa-times"></i></a>
+                                    </div>
+                                    <% } %>
+                                        <div class='elem-padding'>
+                                            <a href="/" type='button' class='bntBuyBookSale'><span>Buy</span></a>
+                                        </div>
                             </div>
                         </div>
                         <% } %>

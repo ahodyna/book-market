@@ -21,7 +21,7 @@ function createBook() {
     shortDescription: document.getElementById('inputShortDescriptionBook').value
   }
 
-  fetch('/books', {
+  fetch('/admin/books', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
@@ -46,7 +46,7 @@ function editBook(id) {
   let modalEdit = document.getElementById("modalEditBook");
   modalEdit.style.display = "block";
 
-  fetch(`/books/${id}`)
+  fetch(`/admin/books/${id}`)
     .then((response) => {
       return response.json()
     })
@@ -92,7 +92,7 @@ function updateBook() {
     shortDescription: document.getElementById('inputShortDescriptionEditBook').value
   }
 
-  fetch(`/books/${bookId}`, {
+  fetch(`/admin/books/${bookId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
@@ -109,7 +109,7 @@ function updateBook() {
 }
 
 function deleteBook(id) {
-  fetch(`/books/${id}`, {
+  fetch(`/admin/books/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'

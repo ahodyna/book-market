@@ -33,12 +33,14 @@
                                 <h4 class='icon-padding'>
                                     <%= dataBook[i].newPrice %>
                                 </h4>
-                                <a href='#' class='icon-padding' onclick="editBook( '<%= dataBook[i].id %>')">
-                                    <i class="fas fa-pencil-alt"></i>
-                                </a>
-                                <a href='#' class='icon-padding' onclick="deleteBook('<%= dataBook[i].id %>')">
-                                    <i class="fas fa-times"></i>
-                                </a>
+                                <% if (user && user.role && user.role=='ADMIN' ) { %>
+                                    <a href='#' class='icon-padding' onclick="editBook( '<%= dataBook[i].id %>')">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <a href='#' class='icon-padding' onclick="deleteBook('<%= dataBook[i].id %>')">
+                                        <i class="fas fa-times"></i>
+                                    </a>
+                                    <% } %>
                             </div>
                             <p class='text'>
                                 <%= dataBook[i].description %>
