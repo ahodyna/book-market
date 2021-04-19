@@ -81,6 +81,15 @@ a:hover {
   padding: 19px 12px;
 }
 
+.cart{
+  font-size: 15px; 
+}
+
+.numberItemsCart{
+  font-size: 20px;
+  color: red;
+}
+
 /* line title */
 
 .content-title {
