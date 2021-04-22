@@ -1,31 +1,23 @@
-let carts = document.querySelectorAll('.add-cart')
 
-for (let i = 0; i < carts.length; i++) {
-    carts[i].addEventListener('click', () => {
-        cartNumbers();
-    })
+const dataKey = 'bookIds';
+
+function addToCart(dataBookElemId) {
+   const idsArray = JSON.parse(localStorage.getItem(dataKey))
+
+   let bookIds = new Set(idsArray)
+   console.log('bookIds', bookIds)
+
+   bookIds.add(dataBookElemId);
+   localStorage.setItem(dataKey, JSON.stringify(Array.from(bookIds)))
+
+   refreshBasketCountNumber()
 }
 
-function cartNumbers() {
-    let productNumbers = localStorage.getItem('cartNumbers')
-    productNumbers = parseInt(productNumbers)
-
-    if (productNumbers) {
-        localStorage.setItem('cartNumbers', productNumbers + 1);
-        document.querySelector('.numberItemsCart').textContent = productNumbers + 1;
-    } else {
-        localStorage.setItem('cartNumbers', 1);
-        document.querySelector('.numberItemsCart').textContent = 1;
-    }
-
+function refreshBasketCountNumber() {
+   const bookIds = JSON.parse(localStorage.getItem(dataKey))
+   let count = bookIds == null? 0: bookIds.length
+   document.getElementById('basketCountNumber').innerText = count
 }
 
-function onloadCartNumbers(){
-    let productNumbers = localStorage.getItem('cartNumbers');
 
-    if(productNumbers){
-        document.querySelector('.numberItemsCart').textContent = productNumbers;
-    }
-}
-
-onloadCartNumbers();
+refreshBasketCountNumber();
